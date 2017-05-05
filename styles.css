@@ -1,9 +1,15 @@
 body {
-	background-color: #f2a50b;
+	background-color: #cecece;
 	color: #ffffff;
 }
+div{
+		width: 100%;
+		background-color: #f1f1f1;
+	    padding: 16px 32px;
+}
 select {
-    background-color: #4CAF50;
+    border-radius: 4px;
+	background-color: #ababab;
     border: none;
     color: white;
     padding: 16px 32px;
