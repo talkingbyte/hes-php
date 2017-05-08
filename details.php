@@ -25,6 +25,7 @@ $res=mysqli_query($con,$qstring1);
 echo "<table><tr><th>Roll Number</th><th>Student's Name</th></tr>";
 while($row=mysqli_fetch_row($res))
 {
+$feed_roll=$_POST[$row[3]];
 echo "<tr><td>".$row[2]."</td><td><a href='#'>".$row[3]."</a></td></tr>";
 }
 echo "</table>";
