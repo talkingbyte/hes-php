@@ -18,17 +18,5 @@ $database="hesdb";
 $feed_class=$_POST['sel_class'];
 $feed_section=$_POST['sel_section'];
 $con=mysqli_connect($host,$user,$password,$database) or die("Couldn't connect to server.");
-$qstring1="SELECT * FROM student_details_17_18 WHERE student_class='$feed_class' AND student_section='$feed_section'";
-if($con!=null)
-{
-$res=mysqli_query($con,$qstring1);
-echo "<table><tr><th>Roll Number</th><th>Student's Name</th></tr>";
-while($row=mysqli_fetch_row($res))
-{
-echo "<tr><td>".$row[2]."</td><td><a href='#'>".$row[3]."</a></td></tr>";
-}
-echo "</table>";
-}
+$qstring1="SELECT student_father,student_mother FROM student_details_17_18 WHERE student_class='$feed_class' AND student_section='$feed_section' AND student_roll_num=$feed_roll";
 ?>
-</body>
-</html>
